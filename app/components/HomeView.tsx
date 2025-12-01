@@ -9,14 +9,14 @@ interface HomeViewProps {
 
 const HomeView = forwardRef<HTMLDivElement, HomeViewProps>(({ galleries, onOpenGallery }, ref) => {
     return (
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-0 md:p-6 max-w-[2000px] mx-auto perspective-1000">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-0 md:p-6 max-w-[2000px] mx-auto perspective-1000">
             {galleries.map((g) => (
                 <div 
                     key={g.id} 
                     onClick={() => onOpenGallery(g)}
                     data-cursor="text"
                     data-cursor-text="OPEN"
-                    className="gallery-card group relative aspect-[3/4] w-full bg-white md:cursor-none cursor-pointer overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500"
+                    className="gallery-card group relative aspect-square w-full bg-white md:cursor-none cursor-pointer overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500"
                 >
                     {/* 
                       Flip Container: This div is what GSAP Flip tracks.

@@ -113,10 +113,10 @@ const AboutOverlay = ({ isOpen, onClose }: AboutOverlayProps) => {
         >
             <button 
                 onClick={onClose} 
-                className="close-btn fixed top-5 right-5 md:top-8 md:right-8 z-[220] text-[#3A3D55] hover:rotate-90 transition-transform duration-500 origin-center md:w-12 md:h-12 flex items-center justify-center"
+                className="close-btn fixed top-5 right-5 md:top-8 md:right-8 z-[220] text-white hover:text-white/80 hover:rotate-90 transition-transform duration-300 hover:scale-110 active:scale-95 flex items-center justify-center"
                 data-cursor="hover"
             >
-                <X size={80} strokeWidth={1.5} />
+                <X size={40} strokeWidth={1.5} className="md:w-12 md:h-12" />
             </button>
 
             {/* Left Panel - Image */}

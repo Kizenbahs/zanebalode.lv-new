@@ -1,7 +1,7 @@
 
 import React, { forwardRef, useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Gallery, Artwork } from "../types";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface GalleryViewProps {
     gallery: Gallery;
@@ -133,11 +133,6 @@ const GalleryView = forwardRef<HTMLDivElement, GalleryViewProps>(({ gallery, nex
                             <span>{gallery.artworks.length} Artworks</span>
                         </div>
                      </div>
-                </div>
-
-                {/* Scroll Hint */}
-                <div className="scroll-hint absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-[#3A3D55]/50 mix-blend-multiply opacity-0">
-                    <ArrowDown className="animate-bounce" size={32} strokeWidth={1} />
                 </div>
             </div>
 

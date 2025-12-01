@@ -183,12 +183,6 @@ export default function Home() {
                     { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.2
                 );
             }
-            if (document.querySelector(".scroll-hint")) {
-                tl.fromTo(".scroll-hint",
-                    { opacity: 0, y: -10 },
-                    { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, 0.5
-                );
-            }
             if (document.querySelector(".gallery-description")) {
                 tl.fromTo(".gallery-description", 
                     { opacity: 0 }, 
