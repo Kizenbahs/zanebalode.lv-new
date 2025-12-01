@@ -218,8 +218,7 @@ export default function Home() {
 
       <Navigation 
         view={view} 
-        onBack={handleBackToHome} 
-        onOpenAbout={() => setIsAboutOpen(true)} 
+        onBack={handleBackToHome}
       />
 
       {/* Main Content Area */}
@@ -227,10 +226,11 @@ export default function Home() {
         
         {/* HOME VIEW: Gallery Grid */}
         {view === "HOME" && (
-            <div className="pt-24 md:pt-32 px-4 pb-12">
+            <div className="pt-4 md:pt-6 px-4 pb-12">
                 <HomeView 
                     galleries={galleries} 
-                    onOpenGallery={handleOpenGallery} 
+                    onOpenGallery={handleOpenGallery}
+                    onOpenAbout={() => setIsAboutOpen(true)}
                 />
             </div>
         )}

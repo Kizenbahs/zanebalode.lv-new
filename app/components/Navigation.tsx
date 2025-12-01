@@ -1,14 +1,13 @@
 
 import React from "react";
-import { ArrowLeft, Menu } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 interface NavigationProps {
     view: "HOME" | "GALLERY";
     onBack: () => void;
-    onOpenAbout: () => void;
 }
 
-const Navigation = ({ view, onBack, onOpenAbout }: NavigationProps) => {
+const Navigation = ({ view, onBack }: NavigationProps) => {
     return (
         <div className="fixed top-0 left-0 w-full z-40 flex justify-center pointer-events-none">
             <nav className="w-full bg-transparent px-5 py-5 md:px-8 md:py-8 flex justify-between items-center pointer-events-auto">
@@ -29,14 +28,6 @@ const Navigation = ({ view, onBack, onOpenAbout }: NavigationProps) => {
                                 <span className="hidden md:inline">Back to Collections</span>
                             </button>
                         )}
-                        <button 
-                            onClick={onOpenAbout} 
-                            data-cursor="hover"
-                            className="group flex items-center justify-center text-[#3A3D55] hover:text-black transition-transform hover:scale-110 active:scale-95 duration-300"
-                            aria-label="Menu"
-                        >
-                            <Menu size={40} strokeWidth={1.5} className="md:w-12 md:h-12" />
-                        </button>
                     </div>
                 </div>
             </nav>

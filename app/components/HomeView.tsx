@@ -5,13 +5,19 @@ import { Gallery } from "../types";
 interface HomeViewProps {
     galleries: Gallery[];
     onOpenGallery: (g: Gallery) => void;
+    onOpenAbout: () => void;
 }
 
-const HomeView = forwardRef<HTMLDivElement, HomeViewProps>(({ galleries, onOpenGallery }, ref) => {
+const HomeView = forwardRef<HTMLDivElement, HomeViewProps>(({ galleries, onOpenGallery, onOpenAbout }, ref) => {
     return (
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-0 md:p-6 max-w-[2000px] mx-auto perspective-1000">
             {/* Hero Block */}
-            <div className="hero-block group relative aspect-square w-full bg-white overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500">
+            <div 
+                onClick={onOpenAbout}
+                data-cursor="text"
+                data-cursor-text="ABOUT"
+                className="hero-block group relative aspect-square w-full bg-white md:cursor-none cursor-pointer overflow-hidden shadow-sm hover:shadow-2xl transition-shadow duration-500"
+            >
                 <div className="absolute inset-0 w-full h-full overflow-hidden">
                     <img 
                         src="https://cdn.diena.lv/media/2020/02/4/large/46c5ac25f2ac.jpg" 
