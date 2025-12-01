@@ -18,11 +18,6 @@ const Navigation = ({ view, onBack, onOpenAbout }: NavigationProps) => {
                         onClick={() => view === "GALLERY" && onBack()}
                         data-cursor="hover"
                     >
-                        <div className="flex flex-col">
-                            <h1 className="text-xl md:text-2xl font-bold tracking-tighter font-display">
-                                ZANE BALODE
-                            </h1>
-                        </div>
                     </div>
                     
                     <div className="flex items-center gap-4 md:gap-6">
