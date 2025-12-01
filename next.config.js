@@ -9,6 +9,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'vetomagazine.wordpress.com',
+      },
     ],
   },
   async headers() {
@@ -51,7 +55,7 @@ const nextConfig = {
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.tailwindcss.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com data:",
-              "img-src 'self' data: https://images.unsplash.com https://aistudiocdn.com",
+              "img-src 'self' data: https://images.unsplash.com https://aistudiocdn.com https://vetomagazine.wordpress.com",
               "connect-src 'self'",
               "frame-ancestors 'self'",
               "base-uri 'self'",

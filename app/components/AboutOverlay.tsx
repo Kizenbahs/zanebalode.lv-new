@@ -126,7 +126,7 @@ const AboutOverlay = ({ isOpen, onClose }: AboutOverlayProps) => {
             >
                 <img 
                     ref={imageRef}
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" 
+                    src="https://vetomagazine.wordpress.com/wp-content/uploads/2012/04/zane.jpg" 
                     alt="Zane Balode" 
                     className="bio-image w-full h-full object-cover opacity-90"
                 />
