@@ -1,3 +1,4 @@
+'use client';
 
 import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { galleries } from "./lib/data";
@@ -10,7 +11,7 @@ import Footer from "./components/Footer";
 import HomeView from "./components/HomeView";
 import GalleryView from "./components/GalleryView";
 
-const App = () => {
+export default function Home() {
   // Views: 'HOME' | 'GALLERY'
   const [view, setView] = useState<"HOME" | "GALLERY">("HOME");
   const [activeGallery, setActiveGallery] = useState<Gallery | null>(null);
@@ -261,24 +262,7 @@ const App = () => {
             onClose={() => setLightboxIndex(null)}
           />
       )}
-
-      {/* CSS Utils */}
-      <style>{`
-        .stroke-text {
-            -webkit-text-stroke: 1px rgba(58, 61, 85, 0.2);
-            color: transparent;
-        }
-        .perspective-1000 {
-            perspective: 1000px;
-        }
-        @media (min-width: 768px) {
-            body {
-                cursor: none;
-            }
-        }
-      `}</style>
     </div>
   );
-};
+}
 
-export default App;

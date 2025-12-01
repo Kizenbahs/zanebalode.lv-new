@@ -14,7 +14,49 @@ View your app in AI Studio: https://ai.studio/apps/drive/1XJPVIY2d3f7J0Z-M5zrFVV
 
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+
+2. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Then edit `.env.local` and add your `GEMINI_API_KEY` (if needed).
+
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+
+## Performance Monitoring
+
+This project includes **Vercel Speed Insights** for real-time performance monitoring:
+- Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
+- Real User Monitoring (RUM)
+- Performance metrics dashboard in Vercel
+
+Speed Insights automatically collects and reports performance data when deployed on Vercel.
+
+## Security
+
+This project includes comprehensive security measures:
+- Security headers (CSP, HSTS, X-Frame-Options, etc.)
+- Middleware protection against common attacks
+- Environment variable validation
+- Input sanitization utilities
+
+See [SECURITY.md](SECURITY.md) for detailed security information.
+
+### Security Commands
+
+```bash
+# Check for vulnerabilities
+npm run security:check
+
+# Fix automatically fixable vulnerabilities
+npm run security:fix
+
+# Audit with moderate level
+npm run security:audit
+```
